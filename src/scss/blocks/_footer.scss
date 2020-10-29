@@ -70,6 +70,11 @@
             padding-top: .75rem;
             color: var(--very-light-gray);
             font-size: .875rem;
+
+            &:hover {
+                color: var(--lime-green);
+            }
+    
         }
     }
 }
@@ -82,6 +87,10 @@
     img {
         width: 22px;
         margin-left: 1rem;
+
+        &:hover {
+            background-color: var(--lime-green);
+        }
     }
 }
 

@@ -41,15 +41,16 @@
       width: 80%;
       height: 40%;
       position: absolute;
-      box-shadow: -1px 1px 5px var(--dark-grayish-blue);
+      box-shadow: -1px 1px 5px var(--dark-blue);
       top:  var(--header-height);
-      left: 5%;
+      left: 10%;
       z-index: 50;
       display: flex;
       transition: all 300ms ease-in-out;
 
      
       .nav__link {
+
          
          &--active, 
          &:hover {
@@ -103,17 +104,40 @@
 }
 
 .nav__link{
+   position: relative;
    text-transform: uppercase;
    color: var(--grayish-blue);
    border-bottom: 1px solid transparent;
    padding: .5rem 3rem;
    display: block;
+
+   &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 5px;
+      background: linear-gradient(45deg, var(--lime-green), var(--bright-cyan));
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+      border-radius: 10px;
+   }
+
+
+
+
+
+
    
   &--active, 
   &:hover {
      color: var(--dark-blue);
-     border-bottom: 1px solid var(--dark-blue);
-
+ 
+     &::after {
+        opacity: 1;
+     }
   }
 
   @include table {
