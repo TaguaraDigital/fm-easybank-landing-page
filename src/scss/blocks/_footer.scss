@@ -19,6 +19,7 @@
 
     @include table {
         flex-direction: row;
+        justify-content: space-between;
         padding: 3rem;  
     }
 
@@ -27,7 +28,7 @@
     }
   
     @include desktop {
-        padding: 3rem 10em;  
+        padding: 3rem 10rem;  
     }
 
     &__column {
@@ -35,13 +36,27 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         
         &:nth-child(2) {
             padding-top: 1.5rem;
+            
+            @include table {
+                padding-top: 0;
+            }
         }
 
         &:last-child {
             padding-top: 2.5rem;
+
+            @include table {
+                padding-top: 0;
+            }
+        }
+
+        @include table {
+            justify-content: space-between;
+            text-align: left;
         }
     }
     
@@ -74,4 +89,8 @@
     font-size: .875rem;
     padding-top: 1.5rem;
     padding-bottom: .5rem;
+
+    @include table {
+        padding: 1.5rem 0 0  0;
+    }
 }
