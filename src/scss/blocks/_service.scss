@@ -1,7 +1,11 @@
 .services {
     background-color: var(--light-grayish-blue);
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
     padding-top: 2.5rem;
+    
+    @include table {
+        padding-top: 1rem;
+    }
 
 
     &__cards {
@@ -43,7 +47,11 @@
         
         img {
             width: 100%;
-            width: 4.15rem;
+            width: 4.25rem;
+
+            @include table {
+                width: 4.6875rem;
+            }
         }
         
         @include table {
@@ -59,19 +67,22 @@
         color: var(--dark-blue);
         
         @include table {
+            padding-top: 2rem;
             font-size: 1.5rem;
         }
     }
 
     &__txt {
         font-size: .875rem;
-        font-weight: 400;
+        font-weight: 300;
         color: var(--grayish-blue);
         padding: 1rem 1.25rem 0;
         line-height: 1.6;
 
         @include table {
+            font-size: 1rem;
             padding-left: 0;
+            padding-right: 0rem;
         }
     }    
 }

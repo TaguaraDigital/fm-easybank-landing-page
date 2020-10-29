@@ -9,6 +9,7 @@
     background-color: var(--light-grayish-blue);
     
     @include table {
+        margin-top: 6.5rem;
         padding: 0 3rem;  
         align-items: flex-start;
      }
@@ -29,7 +30,7 @@
         line-height: 1.2;
         
         @include table {
-            padding: 2.5rem 0;
+            padding: 2.5rem 0 .5rem;
             font-size: 2.375rem;
             text-align: left;
         }
