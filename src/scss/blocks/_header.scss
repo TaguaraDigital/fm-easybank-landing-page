@@ -1,0 +1,129 @@
+.header {
+   width: 100%;
+   height: var(--header-height);
+   margin: 0;
+   padding: 0 1.375rem;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   @include table {
+      padding: 0 3rem;  
+   }
+
+   @include laptop {
+      padding: 0 7rem;  
+   }
+
+   @include desktop {
+      --header-height: 5rem;
+      height: var(--header-height);
+      padding: 0 10em;  
+   }
+}
+
+.nav__logo{
+   z-index: 100;
+   width: 8.25rem;
+ 
+   img {
+      display: block;
+      width: 100%;
+   }
+}
+
+.main-nav {
+   display: none;
+   flex-direction: column;
+ 
+   &--show{
+      width: 80%;
+      height: 40%;
+      position: absolute;
+      box-shadow: -1px 1px 5px var(--dark-grayish-blue);
+      top:  var(--header-height);
+      left: 5%;
+      z-index: 50;
+      display: flex;
+      transition: all 300ms ease-in-out;
+
+     
+      .nav__link {
+         
+         &--active, 
+         &:hover {
+            color: var(--dark-blue);
+         }
+      }
+ 
+      background-color: white;
+   }
+
+   @include table {
+      width: 50%;
+      display: flex; 
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: transparent;
+   }
+}
+
+.nav__list {
+   z-index: 100;
+   flex-direction: column;
+
+   @include table {
+      width: fit-content;
+      position: relative;
+      margin: 0;
+      top: 0;
+      height: var(--header-height);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      background: transparent;
+   }
+}
+
+.nav__item{
+   font-family: var(--ff-title);
+   text-align: center;
+   width: 100%;
+   margin: .5rem;
+
+   @include table {
+      width: fit-content;
+      padding: 0;
+      margin: 0;
+   }
+}
+
+.nav__link{
+   text-transform: uppercase;
+   color: var(--grayish-blue);
+   border-bottom: 1px solid transparent;
+   padding: .5rem 3rem;
+   display: block;
+   
+  &--active, 
+  &:hover {
+     color: var(--dark-blue);
+     border-bottom: 1px solid var(--dark-blue);
+
+  }
+
+  @include table {
+     width: fit-content;
+     padding: 1rem 1rem;
+     font-size: .875rem;
+     border-top: none;
+     
+     &:not(:last-child) {
+        margin-right: 32px;
+     }
+  }
+}

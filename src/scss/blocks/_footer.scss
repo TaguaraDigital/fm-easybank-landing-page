@@ -1,0 +1,41 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 5rem;
+    color: var(--white);
+    background-color: var(--dark-blue);
+
+
+    @include table {
+        flex-direction: row;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        width: 20px;
+        margin-left: 1rem;
+    }
+}
+

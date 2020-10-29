@@ -1,0 +1,66 @@
+.services {
+    background-color: var(--light-grayish-blue);
+    padding-bottom: 3rem;
+
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 1rem;
+        
+        @include table {
+            flex-direction: row;
+            padding-left: 0 3rem;
+        }
+        
+        @include laptop {
+            padding: 0 7rem;  
+        }
+        
+        @include desktop {
+            padding: 0 10rem;  
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        text-align: center;
+        opacity: .9;
+        
+        img {
+            width: 100%;
+            width: 4.25rem;
+        }
+        
+        @include table {
+            text-align: left;
+            align-items: flex-start;
+        }
+    
+    }
+
+    &__title {
+        padding-top: 1.5rem;
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: var(--dark-blue);
+        
+        @include table {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__txt {
+        font-size: .875rem;
+        font-weight: 400;
+        color: var(--grayish-blue);
+        padding: 1rem 1.25rem;
+        line-height: 1.6;
+    }    
+}
